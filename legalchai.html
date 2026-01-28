@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Legal Chai – A Legal Community</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap');
+
+:root {
+--bg: #ffffff;
+--text: #233b5c;
+--subtext: #555;
+--accent: #F1b527;
+--card-bg: #f8f9fb;
+}
+
+[data-theme="dark"] {
+--bg: #111827;
+--text: #f4f4f9;
+--subtext: #ccc;
+--card-bg: #1f2937;
+}
+
+body {
+margin: 0;
+font-family: 'Inter', sans-serif;
+background-color: var(--bg);
+color: var(--text);
+transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1.5rem 3rem;
+max-width: 1300px;
+margin: auto;
+}
+
+.logo {
+font-family: 'Playfair Display', serif;
+font-size: 1.5rem;
+font-weight: 600;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.theme-toggle {
+border: 1px solid var(--accent);
+background: none;
+border-radius: 20px;
+padding: 0.4rem 0.9rem;
+font-size: 0.9rem;
+color: var(--text);
+cursor: pointer;
+transition: 0.3s;
+}
+
+.theme-toggle:hover {
+background-color: var(--accent);
+color: #000;
+}
+
+/* HERO SECTION */
+.hero {
+max-width: 1300px;
+margin: auto;
+padding: 4rem 3rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.hero h1 {
+font-family: 'Playfair Display', serif;
+font-size: 2.6rem;
+max-width: 800px;
+line-height: 1.3;
+margin-bottom: 1rem;
+}
+
+.hero p {
+font-size: 1.1rem;
+color: var(--subtext);
+max-width: 700px;
+line-height: 1.6;
+margin-bottom: 2rem;
+}
+
+.buttons {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+}
+
+.btn {
+padding: 0.9rem 1.8rem;
+border-radius: 6px;
+font-weight: 600;
+text-decoration: none;
+transition: all 0.2s ease-in-out;
+display: inline-block;
+}
+
+.btn-primary {
+background-color: var(--accent);
+color: #000;
+}
+
+.btn-outline {
+border: 2px solid var(--accent);
+color: var(--text);
+background: none;
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+opacity: 0.9;
+}
+
+/* FEATURE SECTION */
+.features {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+max-width: 1200px;
+margin: 4rem auto;
+padding: 0 3rem;
+}
+
+.feature {
+background-color: var(--card-bg);
+padding: 2rem;
+border-radius: 10px;
+text-align: left;
+transition: 0.3s;
+}
+
+.feature:hover {
+transform: translateY(-3px);
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.feature h2 {
+font-family: 'Playfair Display', serif;
+font-size: 1.4rem;
+margin-bottom: 0.8rem;
+color: var(--text);
+}
+
+.feature p {
+font-size: 1rem;
+color: var(--subtext);
+line-height: 1.6;
+}
+
+/* COMMUNITY SECTION */
+.community {
+max-width: 1200px;
+margin: 4rem auto;
+padding: 0 3rem;
+text-align: center;
+}
+
+.community h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
+.community p {
+max-width: 700px;
+margin: auto;
+font-size: 1.05rem;
+color: var(--subtext);
+line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+background-color: var(--card-bg);
+padding: 2rem;
+text-align: center;
+color: var(--subtext);
+font-size: 0.9rem;
+margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+header {
+flex-direction: column;
+gap: 1rem;
+padding: 1rem;
+}
+
+.hero h1 {
+font-size: 2rem;
+}
+
+.hero p {
+font-size: 1rem;
+}
+
+.features {
+padding: 0 1.5rem;
+}
+
+.community {
+padding: 0 1.5rem;
+}
+}
+
+</style>
+</head>
+
+<body data-theme="light">
+<header>
+<div class="logo"><img class="logo" src="https://legalchai.com/assets/legal-chai-icon-DGVEd5UY.png">Legal Chai</div>
+<button class="theme-toggle" id="themeToggle">🌙</button>
+</header>
+
+<section class="hero">
+<h1>Where the legal community connects, writes, and thinks out loud</h1>
+<p>
+<strong>Legal Chai</strong> is an open community for lawyers, law students,
+and legal thinkers to write, publish, and share ideas that shape real-world understanding of the law.
+Discover insightful articles, join discussions, and contribute your perspective.
+</p>
+<div class="buttons">
+<a href="https://legalchai.com/" class="btn btn-primary">Explore Discussions</a>
+<a href="https://legalchai.com/news" class="btn btn-outline">Read & Publish Articles</a>
+</div>
+</section>
+
+<section class="features">
+<div class="feature">
+<h2>Join conversations that matter</h2>
+<p>
+Engage with a growing network of legal minds. Ask questions, share stories,
+and learn from others’ experiences — from law school struggles to professional insights.
+</p>
+</div>
+
+<div class="feature">
+<h2>Write and publish your voice</h2>
+<p>
+Share thoughtful commentary or long-form articles under your name.
+Every post adds to a collective understanding of modern law and its practice.
+</p>
+</div>
+
+<div class="feature">
+<h2>Discover new perspectives</h2>
+<p>
+Read authentic, grounded takes on legal issues, research, and policy.
+From student opinions to senior insights — there’s always something to learn.
+</p>
+</div>
+</section>
+
+<section class="community">
+<h2>A space built for real conversations</h2>
+<p>
+Legal Chai isn’t just another blog — it’s a shared table for the legal community.
+Whether you’re a student, professor, or practitioner, you’ll find a place to talk, debate, and connect over a cup of chai and ideas that matter.
+</p>
+</section>
+
+<footer>
+© 2026 Legal Chai — Built for the legal community. 
+</footer>
+
+<!-- Made by <helly class="name">helly.</helly> -->
+
+<script>
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+themeToggle.addEventListener("click", () => {
+const current = body.getAttribute("data-theme");
+const next = current === "light" ? "dark" : "light";
+body.setAttribute("data-theme", next);
+themeToggle.textContent = next === "light" ? "🌙 Dark Mode" : "☀️ Light Mode";
+});
+</script>
+</body>
+</html>
